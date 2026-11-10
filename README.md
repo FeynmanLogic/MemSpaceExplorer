@@ -57,9 +57,6 @@ The maximum assumes ideal overlap. The request model assumes independent, evenly
 
 The report distinguishes **the roof model's limiting resource** from evidence about an observed bottleneck. Low achieved performance relative to a roof triggers investigation of overhead, occupancy and dependencies. A measured runtime below the bound triggers a counter/calibration consistency check.
 
-Recommendations are conditional candidates, not measured speedup claims or purchase advice. Known capacity failures, unsupported writes, and incompatible PIM operations exclude a scenario. Unknown capacity, write behavior, and PIM compatibility are shown explicitly. Write-intensive HBF phases require a write-performance/endurance model before acting on a read-only latency projection.
-
-The PIM compatibility flag is phase-wide in this MVP; if comparing different PIM instruction sets, use separate configurations with separately verified flags. Baseline DRAM traffic may change with another cache or PIM mapping. Analytic traffic does not automatically equal physical memory traffic. No PIM traffic reduction is inferred. No end-to-end total is inferred because phases may overlap or have different frequencies. Capacity is a per-phase check; simultaneous residency and tier movement are not modeled.
 
 
 
