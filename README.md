@@ -61,14 +61,6 @@ Recommendations are conditional candidates, not measured speedup claims or purch
 
 The PIM compatibility flag is phase-wide in this MVP; if comparing different PIM instruction sets, use separate configurations with separately verified flags. Baseline DRAM traffic may change with another cache or PIM mapping. Analytic traffic does not automatically equal physical memory traffic. No PIM traffic reduction is inferred. No end-to-end total is inferred because phases may overlap or have different frequencies. Capacity is a per-phase check; simultaneous residency and tier movement are not modeled.
 
-## Scope and next steps
 
-The bundled HBM-like, HBF-like and PIM-like numbers are synthetic assumptions, **not a sourced hardware database**. The uploaded notebook's vendor rows were deliberately not copied into default recommendations. A credible product catalog should record exact source documents, dates, precision, system scope, sustained-versus-interface status, and uncertainty ranges.
-
-Useful next additions: normalized profiler CSV import with explicit column mappings, per-phase/per-device PIM eligibility, HBF latency/concurrency/utilization sweeps, sourced and versioned technology profiles, and plots. The present CLI supports manual sweeps through reproducible JSON configurations.
-
-Before publishing, choose a license and replace synthetic profiles with independently checked examples. This archive is a local starter project; it does not create a GitHub repository.
-
-## Technology references
 
 [references.bib](references.bib) includes the ten supplied NVIDIA, Micron, AMD, OCP, Samsung, and HBFSim references. See [the technology-to-source mapping](docs/technology_sources.md) for scope and parameter-provenance notes, including DDR5 and LPDDR5X. Reference keys can be placed in each scenario's `evidence` field and will appear in generated reports and CSV exports. These bibliographic additions do not replace the synthetic demonstration values with verified device profiles.
