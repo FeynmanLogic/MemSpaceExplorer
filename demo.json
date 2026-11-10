@@ -1,0 +1,12 @@
+{
+  "baseline": {"compute_gflops": 4000, "bandwidth_gbs": 250, "evidence": "Synthetic demo, FP32; not a measured device"},
+  "phases": [
+    {"name": "Replay read", "time_ms": 2, "flops": 10000000, "bytes": 250000000, "traffic_basis": "measured_dram", "working_set_gb": 8, "access": "random", "write_fraction": 0, "pim_compatible": false},
+    {"name": "Dense backward", "time_ms": 3, "flops": 8000000000, "bytes": 100000000, "traffic_basis": "analytic", "working_set_gb": 4, "access": "sequential", "write_fraction": 0.4, "pim_compatible": null}
+  ],
+  "technologies": [
+    {"name": "HBM-like scenario", "kind": "memory", "bandwidth_gbs": 1000, "capacity_gb": 24, "supports_writes": true, "evidence": "Illustrative assumption, not a product specification"},
+    {"name": "HBF-like read tier", "kind": "hbf", "bandwidth_gbs": 1000, "capacity_gb": 512, "page_utilization": 0.25, "page_bytes": 4096, "concurrency": 256, "latency_us": 8, "supports_writes": false, "evidence": "Illustrative sensitivity point, not verified HBF specifications"},
+    {"name": "PIM-like scenario", "kind": "pim", "bandwidth_gbs": 500, "compute_gflops": 1000, "capacity_gb": 16, "supports_writes": true, "extra_ms": 0.1, "evidence": "Illustrative compatible-operation roof; traffic transform not modeled"}
+  ]
+}
