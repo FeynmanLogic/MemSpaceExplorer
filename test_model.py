@@ -8,8 +8,8 @@ from memspace import validate, project, analyze
 
 class ModelTests(unittest.TestCase):
     def setUp(self):
-        self.data = json.loads((Path(__file__).resolve().parents[1] / 'examples/demo.json').read_text())
-
+        demo_path = Path(__file__).resolve().parent / 'demo.json'
+        self.data = json.loads(demo_path.read_text())
     def test_memory_bound_improvement_and_compute_bound_plateau(self):
         d = validate(self.data)
         replay, backward = d['phases']
