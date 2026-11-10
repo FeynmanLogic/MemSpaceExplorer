@@ -11,7 +11,7 @@ python memspace.py
 The wizard asks for your baseline's sustained compute and memory bandwidth, phase measurements, and the candidate scenarios you want to explore. To try the included synthetic example:
 
 ```bash
-python memspace.py --input examples/demo.json --out results/demo
+python memspace.py --input demo.json --out results/demo
 python -m unittest discover -s tests -v
 ```
 
